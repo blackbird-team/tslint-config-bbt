@@ -218,6 +218,45 @@ module.exports = {
 			"check-type-operator"
 		],	// CHECK
 
+		// Eslint
+		"no-constant-condition": true,
+		"no-control-regex": true,
+		"no-duplicate-case": true,	// CHECK assign
+		"no-empty-character-class": true,	// check
+		"no-ex-assign": true,
+		"no-extra-boolean-cast": true,
+		"no-extra-semi": true,
+		"no-inner-declarations": [
+			true,
+			"functions"
+		],	// CHECK
+		"no-invalid-regexp": true,
+		"ter-no-irregular-whitespace": [true],
+		"no-regex-spaces": true,
+		"ter-no-sparse-arrays": [true],	// CHECK assign
+		"no-unexpected-multiline": true,	// CHECK assign
+		"ter-no-proto": true,
+		"ter-no-script-url": true,
+		"ter-no-self-compare": true,
+		"handle-callback-err": [true, "^(err|error|anySpecificError)$"],	// CHECK
+		"array-bracket-spacing": [true, "always"],
+		"block-spacing": [
+			true,
+			"always"
+		],	// CHECK assign
+		"ter-computed-property-spacing": [true],
+		"ter-func-call-spacing": [true],
+		"ter-no-mixed-spaces-and-tabs": { "type": "tabs" },
+		"object-curly-spacing": [
+			true,
+			"always"
+		],
+		"space-in-parens": [true, "always"],
+		"ter-no-tabs": false,
+		"ter-arrow-body-style": [true, "always"],
+		"ter-arrow-parens": [true, "as-needed"],	// CHECK assign
+		"ter-arrow-spacing": [true],	// CHECK assign
+		"ter-prefer-arrow-callback": [true],	// CHECK assign
 		"ter-indent": [true, "tab", { "SwitchCase": 1 }]
 	}
 //	"rules": {},
