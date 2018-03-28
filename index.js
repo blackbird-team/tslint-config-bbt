@@ -4,7 +4,7 @@ module.exports = {
 		"exclude": ["node_modules"],
 		"typeCheck": true
 	},
-	"extends": ["tslint-config-prettier", "tslint-eslint-rules"],
+	"extends": ["tslint-eslint-rules"],
 	"rules": {
 		"adjacent-overload-signatures": true,
 		"align": {

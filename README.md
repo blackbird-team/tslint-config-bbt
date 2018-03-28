@@ -22,8 +22,6 @@ npm i -D tslint-config-bbt
 
 ## Includes
 
-[tslint-config-prettier](https://github.com/alexjoverm/tslint-config-prettier)
-
 [tslint-eslint-rules](https://github.com/buzinas/tslint-eslint-rules)
 
 
