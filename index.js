@@ -81,7 +81,7 @@ module.exports = {
 				"ignore-module": "\.sass"
 			}
 		],  // check
-		"no-inferrable-types": [true, "ignore-params", "ignore-properties"],
+		"no-inferrable-types": false,
 		"no-inferred-empty-object-type": true,
 		"no-internal-module": true,	 // assign
 		"no-invalid-template-strings": true,
@@ -239,7 +239,7 @@ module.exports = {
 		"ter-no-script-url": true,
 		"ter-no-self-compare": true,
 		"handle-callback-err": [true, "^(err|error|anySpecificError)$"],	// CHECK
-		"array-bracket-spacing": [true, "always"],
+		"array-bracket-spacing": [true, "as-needed"],
 		"block-spacing": [
 			true,
 			"always"
@@ -251,7 +251,7 @@ module.exports = {
 			true,
 			"always"
 		],
-		"space-in-parens": [true, "always"],
+		"space-in-parens": [true, "never"],
 		"ter-no-tabs": false,
 		"ter-arrow-body-style": [true, "always"],
 		"ter-arrow-parens": [true, "as-needed"],	// CHECK assign
