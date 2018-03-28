@@ -16,9 +16,20 @@ module.exports = {
 		],
 		"ban": [false],
 		"curly": [true, "as-needed"],
+		"cyclomatic-complexity": [true, 3],	// check
+		"deprecation": true,
+		"eofline": true,
 		"forin": false,
 		"import-blacklist": [true, "lodash", "rxjs"],
+		"indent": [true, "tabs"],
 		"label-position": true,	// check
+		"linebreak-style": false,	// CHECK
+		"max-classes-per-file": [true, 1, "exclude-class-expressions"],
+		"max-file-line-count": [true, 200],
+		"max-line-length": [true, {
+			"limit": 120,
+			"ignore-pattern": "^import "
+		}],
 		"member-access": [true, "check-accessor", "check-parameter-property"],
 		"member-ordering": [true, { "order": "fields-first" }],
 		"no-any": true,
@@ -28,6 +39,8 @@ module.exports = {
 		"no-console": [true, "error"],
 		"no-construct": true,
 		"no-debugger": true,
+		"no-default-export": false,
+		"no-duplicate-imports": true,
 		"no-duplicate-super": true,
 		"no-duplicate-switch-case": true,
 		"no-duplicate-variable": [true, "check-parameters"],
@@ -50,12 +63,14 @@ module.exports = {
 		"no-invalid-template-strings": true,
 		"no-invalid-this": [true, "check-function-in-method"],	// check
 		"no-magic-numbers": true,
+		"no-mergeable-namespace": true,
 		"no-misused-new": true,
 		"no-namespace": [true, "allow-declarations"],
 		"no-non-null-assertion": true,
 		"no-null-keyword": false,
 		"no-object-literal-type-assertion": false,	// CHECK
 		"no-parameter-reassignment": true,
+		"no-require-imports": true,
 		"no-return-await": true,	// check
 		"no-reference": true,
 		"no-shadowed-variable": true,	// CHECK
@@ -84,14 +99,22 @@ module.exports = {
 		"no-void-expression": true,
 		"only-arrow-functions": true,
 		"prefer-conditional-expression": false,
+		"prefer-const": true,
 		"prefer-object-spread": false,
 		"prefer-for-of": true,	// check
+		"prefer-readonly": true,
 		"promise-function-async": true,	// check
 		"radix": false,
 		"restrict-plus-operands": true,	// check
 		"strict-boolean-expressions": false,	// check
 		"strict-type-predicates": true,	// check
 		"switch-default": true,
+		"trailing-comma": {
+			"options": {
+				"multiline": "never",
+				"singleline": "never",
+			},
+		},	// CHECK
 		"triple-equals": [true, "allow-null-check", "allow-undefined-check"],
 		"typedef": [true,
 			"call-signature",
@@ -124,7 +147,7 @@ module.exports = {
 		"unified-signatures": true,
 		"use-default-type-parameter": false,
 		"use-isnan": true,
-		"indent": [true, "tabs"],
+
 		"ter-indent": [true, "tab", { "SwitchCase": 1 }]
 	}
 //	"rules": {},
