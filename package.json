@@ -1,0 +1,27 @@
+{
+  "name": "tslint-config-bbt",
+  "version": "0.0.1-alpha",
+  "description": "TSLint Config for TypeScript used by BlackBird Team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackbird-team/tslint-config-bbt.git"
+  },
+  "keywords": [],
+  "author": "Black Bird Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackbird-team/tslint-config-bbt/issues"
+  },
+  "homepage": "https://github.com/blackbird-team/tslint-config-bbt#readme",
+  "peerDependencies": {
+    "tslint": "^5.9.1"
+  },
+  "dependencies": {
+    "tslint-config-prettier": "^1.10.0",
+    "tslint-eslint-rules": "^5.1.0"
+  }
+}
