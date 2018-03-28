@@ -29,8 +29,9 @@ npm i -D tslint-config-bbt
 {
 	"defaultSeverity": "error",
 	"linterOptions": {
-		"exclude": [ "node_modules" ]
+		"exclude": ["node_modules"],
+		"typeCheck": true
 	},
-	"extends": [ "tslint-config-prettier", "tslint-eslint-rules" ]
+	"extends": ["tslint-eslint-rules"]
 }
 ```
