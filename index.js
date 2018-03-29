@@ -97,7 +97,7 @@ module.exports = {
 		"no-parameter-properties": true,
 		"no-parameter-reassignment": true,
 		"no-require-imports": true,
-		"no-redundant-jsdoc": true,
+		"no-redundant-jsdoc": false,	// We are use TypeDoc
 		"no-return-await": true,	// check
 		"no-reference": true,	// check
 		"no-reference-import": true,	// check
@@ -110,7 +110,7 @@ module.exports = {
 		"no-this-assignment": [true, {
 			"allow-destructuring": true
 		}],
-		"no-trailing-whitespace": true,	// CHECK
+		"no-trailing-whitespace": [true, "ignore-jsdoc"],
 		"no-unbound-method": [true, "ignore-static"],
 		"no-unnecessary-callback-wrapper": true,
 		"no-unnecessary-class": [false],	// CHECK
