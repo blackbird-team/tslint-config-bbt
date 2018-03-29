@@ -27,7 +27,7 @@ module.exports = {
 		"comment-format": [true, "check-space", "check-uppercase"],	// CHECK
 		"completed-docs": true,	// CHECK
 		"curly": [true, "as-needed"],
-		"cyclomatic-complexity": [true, 3],	// check
+		"cyclomatic-complexity": [true, 20],
 		"deprecation": true,
 		"encoding": true,
 		"eofline": true,
@@ -200,7 +200,7 @@ module.exports = {
 				},
 			],
 		},	// check
-		"typeof-compare": true,
+		"typeof-compare": false,	// deprecated
 		"unified-signatures": true,
 		"use-default-type-parameter": false,
 		"use-isnan": true,
