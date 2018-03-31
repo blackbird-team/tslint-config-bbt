@@ -11,10 +11,10 @@ module.exports = {
 			"options": [ "members", "statements" ]
 		},
 		"array-type": [true, "array"],
-		"arrow-parens": [true, "ban-single-arg-parens"],	// CHECK
-		"arrow-return-shorthand": true,	// CHECK
+		"arrow-parens": [true],
+		"arrow-return-shorthand": [true, "multiline"],
 		"await-promise": true,
-		"ban-comma-operator": true,	// check
+		"ban-comma-operator": [true],	// Duplicate check for some situation as TS2695
 		"ban-types": [
 			true,
 			["String", "Use 'string' instead."],
@@ -24,8 +24,8 @@ module.exports = {
 		"binary-expression-operand-order": true,
 		"callable-types": true,
 		"class-name": true,
-		"comment-format": [true, "check-space", "check-uppercase"],	// CHECK
-		"completed-docs": true,	// CHECK
+		"comment-format": [true, "check-space", "check-uppercase"],
+		"completed-docs": [true],
 		"curly": [true, "as-needed"],
 		"cyclomatic-complexity": [true, 20],
 		"deprecation": true,
@@ -38,8 +38,8 @@ module.exports = {
 		"indent": [true, "tabs"],
 		"interface-name": [true, "always-prefix"],
 		"interface-over-type-literal": true,
-		"jsdoc-format": [true, "check-multiline-start"],	// CHECK
-		"label-position": true,	// check
+		"jsdoc-format": [true, "check-multiline-start"],
+		"label-position": true,
 		"linebreak-style": false,	// CHECK
 		"match-default-export-name": false,
 		"max-classes-per-file": [true, 1, "exclude-class-expressions"],
@@ -56,7 +56,7 @@ module.exports = {
 		"no-angle-bracket-type-assertion": true,
 		"no-any": true,
 		"no-arg": true,
-		"no-bitwise": false,	// check
+		"no-bitwise": true,
 		"no-boolean-literal-compare": true,
 		"no-conditional-assignment": true,
 		"no-consecutive-blank-lines": [true, 1],
@@ -72,7 +72,7 @@ module.exports = {
 		"no-empty": true,
 		"no-eval": true,
 		"no-empty-interface": true,
-		"no-floating-promises": true,	// check
+		"no-floating-promises": true,
 		"no-for-in-array": true,
 		"no-implicit-dependencies": true,
 		"no-import-side-effect": [
@@ -80,12 +80,12 @@ module.exports = {
 			{
 				"ignore-module": "\.sass"
 			}
-		],  // check
+		],
 		"no-inferrable-types": false,
 		"no-inferred-empty-object-type": true,
-		"no-internal-module": true,	 // assign
+		"no-internal-module": true,
 		"no-invalid-template-strings": true,
-		"no-invalid-this": [true, "check-function-in-method"],	// check
+		"no-invalid-this": [true, "check-function-in-method"],
 		"no-irregular-whitespace": true,
 		"no-magic-numbers": true,
 		"no-mergeable-namespace": true,
@@ -98,12 +98,12 @@ module.exports = {
 		"no-parameter-reassignment": true,
 		"no-require-imports": true,
 		"no-redundant-jsdoc": false,	// We are use TypeDoc
-		"no-return-await": true,	// check
-		"no-reference": true,	// check
-		"no-reference-import": true,	// check
-		"no-shadowed-variable": true,	// CHECK
+		"no-return-await": true,
+		"no-reference": true,
+		"no-reference-import": true,
+		"no-shadowed-variable": true,
 		"no-sparse-arrays": true,
-		"no-string-literal": true,	// check
+		"no-string-literal": true,
 		"no-string-throw": true,
 		"no-submodule-imports": false,
 		"no-switch-case-fall-through": true,
@@ -116,22 +116,18 @@ module.exports = {
 		"no-unnecessary-class": [false],	// CHECK
 		"no-unnecessary-initializer": true,
 		"no-unnecessary-type-assertion": [true, "AnyDuringMigration"], // check
-		"no-unnecessary-qualifier": true,	// CHECK
+		"no-unnecessary-qualifier": true,
 		"no-unsafe-any": true,	// check
-		"no-unsafe-finally": true,	// check
-		"no-unused-expression": [
-			true,
-			"allow-new",
-			"allow-fast-null-checks"
-		],	// check
-		"no-unused-variable": [true, "check-parameters"],	// check
+		"no-unsafe-finally": true,
+		"no-unused-expression": [ true, "allow-new", "allow-fast-null-checks" ],
+		"no-unused-variable": [true, "check-parameters"],
 		"no-use-before-declare": true,
-		"no-var-keyword": true,	// asign
-		"no-var-requires": true,	// assign
+		"no-var-keyword": true,
+		"no-var-requires": false,	// Duplication no-require-imports
 		"no-void-expression": true,
 		"number-literal-format": true,
-		"object-literal-key-quotes": [true, "as-needed"],	// CHECK
-		"object-literal-shorthand": true,	// CHECK
+		"object-literal-key-quotes": [true, "as-needed"],
+		"object-literal-shorthand": [true, "always"],
 		"one-line": [true, "check-open-brace", "check-catch", "check-else", "check-finally", "check-whitespace"],
 		"one-variable-per-declaration": [true, "ignore-for-loop"],
 		"only-arrow-functions": true,
@@ -141,14 +137,14 @@ module.exports = {
 		"prefer-object-spread": false,
 		"prefer-method-signature": true,
 		"prefer-function-over-method": false,	// check
-		"prefer-for-of": true,	// check
+		"prefer-for-of": true,
 		"prefer-readonly": true,
 		"prefer-switch": true,
-		"prefer-template": [true, "allow-single-concat"],	// CHECK
-		"promise-function-async": true,	// check
-		"quotemark": [true, "double", "avoid-escape"],	// CHECK
+		"prefer-template": [true, "allow-single-concat"],
+		"promise-function-async": true,
+		"quotemark": [true, "double", "avoid-escape"],
 		"radix": false,
-		"restrict-plus-operands": true,	// check
+		"restrict-plus-operands": false,	// Partially overlapped by the rule typedef
 		"return-undefined": true,
 		"semicolon": [true, "always", "ignore-bound-class-methods", "ignore-interfaces"],
 		"space-before-function-paren": {
@@ -170,9 +166,9 @@ module.exports = {
 				"multiline": "never",
 				"singleline": "never",
 			},
-		},	// CHECK
+		},
 		"triple-equals": [true, "allow-null-check", "allow-undefined-check"],
-		"type-literal-delimiter": true,	// check
+		"type-literal-delimiter": true,	// Not used because "interface-over-type-literal" is enabled
 		"typedef": [true,
 			"call-signature",
 			"arrow-call-signature",
@@ -253,7 +249,7 @@ module.exports = {
 		],
 		"space-in-parens": [true, "never"],
 		"ter-no-tabs": false,
-		"ter-arrow-body-style": [true, "always"],
+		"ter-arrow-body-style": [true, "newer"],
 		"ter-arrow-parens": [true, "as-needed"],	// CHECK assign
 		"ter-arrow-spacing": [true],	// CHECK assign
 		"ter-prefer-arrow-callback": [true],	// CHECK assign
