@@ -110,7 +110,7 @@ module.exports = {
 		"no-this-assignment": [true, {
 			"allow-destructuring": true
 		}],
-		"no-trailing-whitespace": [true, "ignore-jsdoc"],
+		"no-trailing-whitespace": [true, "ignore-jsdoc", "ignore-blank-lines"],
 		"no-unbound-method": [true, "ignore-static"],
 		"no-unnecessary-callback-wrapper": true,
 		"no-unnecessary-class": [false],	// CHECK
