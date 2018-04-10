@@ -50,7 +50,7 @@ module.exports = {
 		}],
 		"member-access": [true, "check-accessor", "check-parameter-property"],
 		"member-ordering": [true, { "order": "fields-first" }],
-		"newline-before-return": true,
+		"newline-before-return": false,
 		"newline-per-chained-call": false,
 		"new-parens": true,
 		"no-angle-bracket-type-assertion": true,
