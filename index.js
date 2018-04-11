@@ -131,7 +131,7 @@ module.exports = {
 		"one-line": [true, "check-open-brace", "check-catch", "check-else", "check-finally", "check-whitespace"],
 		"one-variable-per-declaration": [true, "ignore-for-loop"],
 		"only-arrow-functions": true,
-		"ordered-imports": [false],	// CHECK
+		"ordered-imports": [false],
 		"prefer-conditional-expression": false,
 		"prefer-const": true,
 		"prefer-object-spread": false,
@@ -157,8 +157,8 @@ module.exports = {
 			}
 		},
 		"space-within-parens": [true, 0],
-		"strict-boolean-expressions": false,	// check
-		"strict-type-predicates": true,	// check
+		"strict-boolean-expressions": [true, "allow-string", "allow-undefined-union", "allow-mix", "allow-null-union"],
+		"strict-type-predicates": true,
 		"switch-default": true,
 		"switch-final-break": [true, "always"],
 		"trailing-comma": {
@@ -174,28 +174,25 @@ module.exports = {
 			"arrow-call-signature",
 			"parameter",
 			"arrow-parameter",
-			"variable-declaration",
 			"property-declaration",
 			"member-variable-declaration"
-		],	// check
-		"typedef-whitespace": {
-			"options": [
-				{
-					"call-signature": "nospace",
-					"index-signature": "nospace",
-					"parameter": "nospace",
-					"property-declaration": "nospace",
-					"variable-declaration": "nospace",
-				},
-				{
-					"call-signature": "onespace",
-					"index-signature": "onespace",
-					"parameter": "onespace",
-					"property-declaration": "onespace",
-					"variable-declaration": "onespace",
-				},
-			],
-		},	// check
+		],
+		"typedef-whitespace": [true,
+			{
+				"call-signature": "nospace",
+				"index-signature": "nospace",
+				"parameter": "nospace",
+				"property-declaration": "nospace",
+				"variable-declaration": "nospace"
+			},
+			{
+				"call-signature": "onespace",
+				"index-signature": "onespace",
+				"parameter": "onespace",
+				"property-declaration": "onespace",
+				"variable-declaration": "onespace"
+			}
+		],
 		"typeof-compare": false,	// deprecated
 		"unified-signatures": true,
 		"use-default-type-parameter": false,
@@ -212,7 +209,7 @@ module.exports = {
 			"check-type",
 			"check-typecast",
 			"check-type-operator"
-		],	// CHECK
+		],
 
 		// Eslint
 		"no-constant-condition": true,
