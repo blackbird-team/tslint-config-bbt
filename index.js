@@ -74,7 +74,7 @@ module.exports = {
 		"no-empty-interface": true,
 		"no-floating-promises": true,
 		"no-for-in-array": true,
-		"no-implicit-dependencies": true,
+		"no-implicit-dependencies": false, // There is no support for absolute paths
 		"no-import-side-effect": [
 			true,
 			{
