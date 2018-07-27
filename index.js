@@ -120,7 +120,6 @@ module.exports = {
 		"no-unsafe-any": true,	// check
 		"no-unsafe-finally": true,
 		"no-unused-expression": [ true, "allow-new", "allow-fast-null-checks" ],
-		"no-unused-variable": [true, "check-parameters"],
 		"no-use-before-declare": true,
 		"no-var-keyword": true,
 		"no-var-requires": false,	// Duplication no-require-imports
